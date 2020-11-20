@@ -1,6 +1,10 @@
-sudo: required
+#super user permission
+sudo: required 
 services:
     - docker
 
 before_install:
-    - docker build -t vinovero/docker-react -f Dockerfile.dev .
+    - docker build -t vinovero/docker-react-test -f Dockerfile.dev .
+
+script:
+    - docker run vinovero/docker-react-test npm run test -- --coverage
