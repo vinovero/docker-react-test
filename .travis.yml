@@ -7,4 +7,4 @@ before_install:
 
 script:
    - docker run -e CI=true vinovero/docker-react-test npm run test
-   #- docker run vinovero/docker-react-test npm run test -- --coverage
+   # - docker run vinovero/docker-react-test npm run test -- --coverage
